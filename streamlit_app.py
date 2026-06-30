@@ -21,7 +21,7 @@ def load_chain():
         embedding_function=embeddings
     )
     retriever = db.as_retriever(search_kwargs={"k": 3})
-    llm = ChatGroq(model="llama-3.3-70b-versatile")
+    llm = ChatGroq(model="llama-3.1-8b-instant")
     prompt = ChatPromptTemplate.from_template("""
     Answer based on context only:
     {context}
